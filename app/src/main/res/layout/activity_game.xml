@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.GameActivity">
+
+    <com.ske.snakebaddesign.guis.BoardView
+        android:id="@+id/board_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/board_view"
+        android:orientation="vertical"
+        android:weightSum="3"
+        android:gravity="center_vertical|center_horizontal">
+
+        <TextView
+            android:id="@+id/text_player_turn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Player 1's Turn"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:textColor="#7da240"/>
+
+        <RelativeLayout
+            android:id="@+id/button_take_turn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:background="@drawable/circle" >
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/imageView"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/dice" />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
